@@ -1,0 +1,12 @@
+{
+  "posts": [
+    {
+      "slug": "welcome",
+      "title": "Welcome to VNS Blog",
+      "summary": "What this space is for, how to add new posts, and why it stays simple.",
+      "date": "2025-12-23",
+      "tags": ["intro", "meta"]
+    }
+  ]
+}
+

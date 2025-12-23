@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VNS Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo-circle">V</div>
+      <div>
+        <div class="brand-name">VNS Blog</div>
+        <div class="brand-tagline">Thoughtful notes, simply shared.</div>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="#" data-link="home" class="nav-link active">Home</a>
+      <a href="#" data-link="about" class="nav-link">About</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section id="home-view" class="view">
+      <div class="hero">
+        <div>
+          <h1>VNS Blog</h1>
+          <p>Minimal, calm, and ready for your markdown essays.</p>
+        </div>
+        <div class="hero-meta">
+          <div class="pill">Markdown first</div>
+          <div class="pill">Fast & static</div>
+          <div class="pill">Readable typography</div>
+        </div>
+      </div>
+      <div id="posts-grid" class="posts-grid" aria-live="polite"></div>
+    </section>
+
+    <section id="post-view" class="view hidden">
+      <div class="post-meta">
+        <a class="back-link" href="#" id="back-link">← Back to all posts</a>
+        <div id="post-tags" class="tags"></div>
+        <div id="post-date" class="post-date"></div>
+      </div>
+      <article id="post-article" class="post-article"></article>
+    </section>
+
+    <section id="about-view" class="view hidden">
+      <h2>About this blog</h2>
+      <p>
+        This site is fully static and consumes markdown files from the <code>posts/</code> folder.
+        Add a new entry to <code>posts/index.json</code>, drop in a markdown file, and it will appear automatically.
+      </p>
+      <p>
+        Typography is set in Inter with relaxed line heights for long-form reading. The layout is responsive and keeps
+        a single-column flow on small screens, while spacing grows subtly on large displays.
+      </p>
+      <ul class="about-list">
+        <li>Supports headings, paragraphs, lists, links, code blocks, and quotes.</li>
+        <li>No build steps required; open <code>index.html</code> locally or serve with any static host.</li>
+        <li>Accessible focus states, prefers reduced motion when requested by the user.</li>
+      </ul>
+    </section>
+  </main>
+
+  <template id="post-card-template">
+    <article class="post-card">
+      <div class="post-card-head">
+        <span class="post-card-date"></span>
+        <div class="post-card-tags"></div>
+      </div>
+      <h3 class="post-card-title"></h3>
+      <p class="post-card-summary"></p>
+      <a class="post-card-link" href="#">Read →</a>
+    </article>
+  </template>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>
+
